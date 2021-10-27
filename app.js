@@ -35,6 +35,7 @@ const generateImg = (idx) => {
     newImg.classList.add('imgCard');
     newImg.src = `${data[idx].sprites.other["official-artwork"].front_default}`;
     newImg.setAttribute("width", "256px");
+    // create a data id for img
     newImg.setAttribute('dataId', `${data[idx].id}`)
     // toggle img function
     toggleImg(newImg);
@@ -71,7 +72,9 @@ const generateGame = (idx) => {
 // challenge2:===========================================
 // toggle img by clicking on img
 function toggleImg(newImg){
+    // get the img id
     const id = newImg.getAttribute('dataId')
+    // add eventlistener to img
     newImg.addEventListener('click',function(){
         for(let i=0; i<data.length; i++){
             if(data[i].id === Number(id)){
