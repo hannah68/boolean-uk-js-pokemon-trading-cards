@@ -13,7 +13,7 @@ const createCard = () => {
         cardContainer.classList.add('card');
 
         // then append all of childs to the card container
-        cards.append(cardContainer)
+        cards.appendChild(cardContainer)
         cardContainer.appendChild(generateName(i))
         cardContainer.appendChild(generateImg(i));
         cardContainer.appendChild(generateInfo(i));
