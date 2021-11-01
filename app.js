@@ -71,7 +71,7 @@ const generateGame = (idx) => {
 
 // challenge2:===========================================
 // toggle img by clicking on img
-function toggleImg(newImg){
+const toggleImg = (newImg) =>{
     // get the img id
     const id = newImg.getAttribute('dataId')
     // add eventlistener to img
